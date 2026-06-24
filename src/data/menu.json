@@ -1,0 +1,216 @@
+[
+    {
+        "category": "SUSHI",
+        "catDesc": "Explore a selection of handcrafted sushi featuring fresh seafood, perfectly seasoned rice, and authentic Japanese flavors.",
+        "items": [
+            {
+                "title": "Salmon Nigiri",
+                "desc": "Fresh slices of salmon served over seasoned sushi rice.",
+                "price": "$8",
+                "pick": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Tuna Nigiri",
+                "desc": "Premium tuna paired with perfectly seasoned rice.",
+                "price": "$9",
+                "pick": []
+            },
+            {
+                "title": "Ebi Nigiri",
+                "desc": "Sweet shrimp nigiri topped with a touch of wasabi.",
+                "price": "$7",
+                "pick": []
+            },
+            {
+                "title": "Tamago Nigiri",
+                "desc": "Japanese sweet omelet served on sushi rice.",
+                "price": "$6",
+                "pick": []
+            },
+            {
+                "title": "Unagi Nigiri",
+                "desc": "Grilled freshwater eel glazed with sweet soy sauce.",
+                "price": "$11",
+                "pick": [
+                    "chef"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "SIGNATURE ROLLS",
+        "catDesc": "Discover our chef-inspired rolls, combining fresh ingredients, bold flavors, and beautiful presentation in every bite.",
+        "items": [
+            {
+                "title": "Dragon Roll",
+                "desc": "Shrimp tempura roll topped with avocado and eel sauce.",
+                "price": "$14",
+                "pick": [
+                    "chef"
+                ]
+            },
+            {
+                "title": "Tokyo Crunch Roll",
+                "desc": "Crispy tempura flakes, crab, cucumber, and spicy mayo.",
+                "price": "$13",
+                "pick": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Rainbow Roll",
+                "desc": "California roll topped with assorted fresh fish.",
+                "price": "$15",
+                "pick": []
+            },
+            {
+                "title": "Spicy Salmon Roll",
+                "desc": "Fresh salmon mixed with spicy sauce and cucumber.",
+                "price": "$12",
+                "pick": []
+            },
+            {
+                "title": "California Roll",
+                "desc": "Classic roll with crab, avocado, and cucumber.",
+                "price": "$10",
+                "pick": []
+            }
+        ]
+    },
+    {
+        "category": "APPETIZERS",
+        "catDesc": "From crispy bites to savory classics, our appetizers are designed to awaken your appetite before the main course.",
+        "items": [
+            {
+                "title": "Gyoza",
+                "desc": "Pan-fried Japanese dumplings filled with seasoned chicken.",
+                "price": "$8",
+                "pick": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Edamame",
+                "desc": "Steamed soybeans lightly seasoned with sea salt.",
+                "price": "$5",
+                "pick": []
+            },
+            {
+                "title": "Chicken Karaage",
+                "desc": "Japanese-style crispy fried chicken served with lemon.",
+                "price": "$9",
+                "pick": []
+            },
+            {
+                "title": "Takoyaki",
+                "desc": "Savory octopus balls topped with bonito flakes.",
+                "price": "$8",
+                "pick": []
+            },
+            {
+                "title": "Agedashi Tofu",
+                "desc": "Lightly fried tofu served in savory dashi broth.",
+                "price": "$7",
+                "pick": []
+            }
+        ]
+    },
+    {
+        "category": "RAMEN",
+        "catDesc": "Enjoy our carefully crafted ramen bowls, featuring slow-simmered broths, tender toppings, and traditional Japanese flavors.",
+        "items": [
+            {
+                "title": "Tonkotsu Ramen",
+                "desc": "Rich pork bone broth with chashu pork and soft-boiled egg.",
+                "price": "$15",
+                "pick": [
+                    "chef"
+                ]
+            },
+            {
+                "title": "Shoyu Ramen",
+                "desc": "Traditional soy sauce broth with sliced pork and scallions.",
+                "price": "$13",
+                "pick": []
+            },
+            {
+                "title": "Miso Ramen",
+                "desc": "Savory miso broth served with vegetables and pork.",
+                "price": "$14",
+                "pick": []
+            },
+            {
+                "title": "Spicy Ramen",
+                "desc": "Bold spicy broth with tender chicken and vegetables.",
+                "price": "$15",
+                "pick": [
+                    "guest"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "SPECIALS",
+        "catDesc": "Experience the finest creations from our kitchen, featuring seasonal ingredients and customer-favorite specialties.",
+        "items": [
+            {
+                "title": "Tokyo Premium Set",
+                "desc": "Chef's selection of sushi, rolls, and seasonal specialties.",
+                "price": "$28",
+                "pick": [
+                    "Best Set"
+                ]
+            },
+            {
+                "title": "Sashimi Deluxe",
+                "desc": "Fresh assortment of premium salmon, tuna, and white fish.",
+                "price": "$24",
+                "pick": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Wagyu Rice Bowl",
+                "desc": "Tender grilled wagyu beef served over steamed rice.",
+                "price": "$22",
+                "pick": [
+                    "chef"
+                ]
+            }
+        ]
+    },
+    {
+        "category": "DRINKS",
+        "catDesc": "Complete your dining experience with refreshing teas, specialty drinks, and handcrafted beverages inspired by Japanese culture.",
+        "items": [
+            {
+                "title": "Matcha Latte",
+                "desc": "Creamy Japanese green tea latte with rich matcha flavor.",
+                "price": "$6",
+                "pick": []
+            },
+            {
+                "title": "Iced Matcha",
+                "desc": "Refreshing iced matcha served with lightly sweetened milk.",
+                "price": "$5",
+                "pick": []
+            },
+            {
+                "title": "Yuzu Soda",
+                "desc": "Sparkling citrus drink with sweet and tangy yuzu.",
+                "price": "$5",
+                "pick": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Japanese Green Tea",
+                "desc": "Traditional hot green tea brewed from premium leaves.",
+                "price": "$4",
+                "pick": []
+            }
+        ]
+    }
+]

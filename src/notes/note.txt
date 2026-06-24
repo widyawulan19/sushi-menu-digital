@@ -1,0 +1,159 @@
+import { NavLink } from "react-router-dom";
+
+export default function Navbar() {
+  const linkStyle = "px-4 py-2 hover:text-yellow-400";
+
+  return (
+    <nav className="flex justify-between items-center p-4 border-b border-gray-800">
+      <div className="font-bold">SUSHI MENU</div>
+
+      <div className="flex gap-4">
+        <NavLink to="/" className={linkStyle}>Home</NavLink>
+        <NavLink to="/category" className={linkStyle}>Category</NavLink>
+        <NavLink to="/recommendation" className={linkStyle}>Recommendation</NavLink>
+        <NavLink to="/about" className={linkStyle}>About</NavLink>
+      </div>
+    </nav>
+  );
+}
+
+
+import { Link } from "react-router-dom";
+
+export default function NavButton({
+  to,
+  label,
+}: {
+  to: string;
+  label: string;
+}) {
+  return (
+    <Link
+      to={to}
+      className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-300"
+    >
+      {label}
+    </Link>
+  );
+}
+
+import NavButton from "../components/NavButton";
+
+export default function Welcome() {
+  return (
+    <div className="h-[80vh] flex flex-col items-center justify-center text-center gap-6">
+      <h1 className="text-5xl font-bold">Welcome to Sushi Menu 🍣</h1>
+      <p className="text-gray-400 max-w-md">
+        Explore Japanese cuisine with a modern digital menu experience
+      </p>
+
+      <NavButton to="/category" label="Start Explore" />
+    </div>
+  );
+}
+
+
+import menu from "../data/menu.json";
+import { Link } from "react-router-dom";
+import type { MenuCategory } from "../types/menu";
+
+const data = menu as MenuCategory[];
+
+export default function Category() {
+  return (
+    <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+      {data.map((cat) => (
+        <Link
+          key={cat.category}
+          to={`/category/${cat.category}`}
+          className="p-6 border border-gray-700 rounded-xl hover:bg-gray-900"
+        >
+          <h2 className="text-xl font-bold">{cat.category}</h2>
+          <p className="text-gray-400 text-sm mt-2">
+            {cat.items.length} items
+          </p>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+
+
+import { Routes, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import Category from "./pages/Category";
+import CategoryDetail from "./pages/CategoryDetail";
+import Recommendation from "./pages/Recommendation";
+import About from "./pages/About";
+import Navbar from "./components/Navbar";
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/category/:name" element={<CategoryDetail />} />
+        <Route path="/recommendation" element={<Recommendation />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </div>
+  );
+}
+
+
+
+/* =======================
+DETAIL CATEGORY
+======================= */
+
+
+import { useParams } from "react-router-dom";
+import menu from "../data/menu.json";
+import type { MenuCategory } from "../types/menu";
+
+const data = menu as MenuCategory[];
+
+export default function CategoryDetail() {
+  const { name } = useParams();
+
+  const category = data.find(
+    (c) => c.category.toLowerCase() === name?.toLowerCase()
+  );
+
+  if (!category) {
+    return <div className="p-6">Category not found</div>;
+  }
+
+  return (
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-6">{category.category}</h1>
+
+      <div className="grid gap-4">
+        {category.items.map((item) => (
+          <div
+            key={item.title}
+            className="p-4 border border-gray-700 rounded-xl"
+          >
+            <div className="flex justify-between">
+              <h3 className="font-semibold">{item.title}</h3>
+              <span>{item.price}</span>
+            </div>
+
+            <p className="text-gray-400 text-sm mt-2">{item.desc}</p>
+
+            {item.pick.length > 0 && (
+              <p className="text-yellow-400 text-xs mt-2">
+                {item.pick.includes("chef") && "👨‍🍳 Chef Pick "}
+                {item.pick.includes("guest") && "⭐ Guest Favorite"}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

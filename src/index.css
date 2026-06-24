@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #111111;
+  --color-accent: #B71C1C;
+  --color-soft-accent: #E63946;
+  --color-yellow: #D4AF37;
+
+  --color-red-opacity: #B71C1C;
+
+  --color-text: #F5F5F5;
+  --color-text-primary: #BDBDBD;
+
+  --color-bg-button: #222222;
+
+  /* Font Size */
+  --text-hero: 1.875rem;
+  --text-page: 1.5rem;
+  --text-section: 1.25rem;
+  --text-card: 1.125rem;
+  --text-body: 1rem;
+  --text-description: 0.875rem;
+  --text-caption: 0.75rem;
+}
