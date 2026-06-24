@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import welcomeImg from '../assets/WELCOME.png'
 
 export default function Welcome() {
     const navigate = useNavigate();
@@ -7,7 +8,9 @@ export default function Welcome() {
         navigate('/category')
     }
     return (
-        <div className=" flex flex-col justify-end w-[360px]  h-screen gap-2.5 p-4  border shadow-md border-primary bg-[url('/src/Assets/WELCOME.png')] bg-cover bg-no-repeat text-white">
+        <div className=" flex flex-col justify-end w-[360px]  h-screen gap-2.5 p-4  border shadow-md border-primary bg-cover bg-no-repeat text-white"
+            style={{ backgroundImage: `url(${welcomeImg})` }}
+        >
 
             {/* <NavButton to="/category" label="EXPLORE OUR MENU" /> */}
             <div className="py-2 w-full flex flex-col items-center justify-center gap-4">
