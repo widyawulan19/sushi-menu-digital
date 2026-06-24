@@ -3,8 +3,6 @@ import menu from '../data/menu.json'
 import type { MenuCategory } from '../types/menu'
 import Navbar from '../components/Navbar';
 import NavButton from '../components/NavButton';
-import { useState } from 'react';
-import type { Tab } from '../components/NavButton';
 import { IoArrowBackOutline } from "react-icons/io5";
 
 //image import 
@@ -24,7 +22,6 @@ const data = menu as MenuCategory[];
 
 export default function CategoryDetail() {
     const { name } = useParams();
-    const [activeTab, setActiveTab] = useState<Tab>("menu")
     const navigate = useNavigate();
 
     // FUNGSI NAVIGATE TO WELCOME 

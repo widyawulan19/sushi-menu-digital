@@ -1,6 +1,5 @@
 import menu from '../data/menu.json'
 import type { MenuCategory, MenuItem } from '../types/menu'
-import type { Tab } from '../components/NavButton'
 
 // import image 
 import img1 from '../assets/rec1.png'
@@ -26,32 +25,25 @@ const galleryImages = [
 ];
 
 
-
-
-
-import imgGroup1 from '../assets/group 1.png'
-
-import { useState } from 'react';
 import NavButton from '../components/NavButton';
 import Navbar from '../components/Navbar';
 
 const data = menu as MenuCategory[];
 
 export default function Reccomendation() {
-    const [activeTab, setActiveTab] = useState<Tab>("recommendation")
     const allItems: MenuItem[] = data.flatMap((c) => c.items);
 
     const ourPick = allItems.find((item) =>
         item.pick.includes("Best Set")
     )
 
-    const chefPick = allItems.filter((item) =>
-        item.pick.includes("chef")
-    );
+    // const chefPick = allItems.filter((item) =>
+    //     item.pick.includes("chef")
+    // );
 
-    const guestPick = allItems.filter((item) =>
-        item.pick.includes("guest")
-    );
+    // const guestPick = allItems.filter((item) =>
+    //     item.pick.includes("guest")
+    // );
 
 
     return (

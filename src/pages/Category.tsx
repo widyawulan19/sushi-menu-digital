@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import NavButton from '../components/NavButton';
 import menu from '../data/menu.json'
 import type { MenuCategory } from '../types/menu'
-import { Link, useNavigate } from 'react-router-dom'
-import type { Tab } from '../components/NavButton'
+import { useNavigate } from 'react-router-dom'
 
 
 // image import 
@@ -22,7 +20,6 @@ type CategoryName = | "SUSHI" | "SIGNATURE ROLLS" | "APPETIZERS" | "RAMEN" | "SP
 const data = menu as MenuCategory[];
 
 export default function Category() {
-    const [activeTab, setActiveTab] = useState<Tab>("menu");
     const navigate = useNavigate();
 
     const navigateToCategory = (name: string) => {

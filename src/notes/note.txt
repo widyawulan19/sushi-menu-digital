@@ -157,3 +157,110 @@ export default function CategoryDetail() {
     </div>
   );
 }
+
+
+
+/* =======================
+BG URL
+======================= */
+<div
+  className="
+    flex flex-col justify-end
+    min-w-[360px] w-full h-screen
+    gap-2.5 p-4
+    rounded-lg border shadow-md
+    border-[var(--color-border)]
+    bg-[url('/src/Assets/plainbg.png')]
+    bg-cover bg-no-repeat
+  "
+>
+
+
+
+@theme {
+  --color-background: #121212;
+  --color-surface: #232323;
+  --color-primary: #C49A6C;
+}
+
+/* =======================
+CARA PANGGIL
+======================= */
+<div className="bg-background">
+<div className="bg-surface">
+<p className="text-primary">
+
+
+
+const categoryPic: Record<CategoryName, string> = {
+  "Black Tea": cat1,
+  "Green Tea": cat2,
+  "Herbal Tea": cat3,
+  "Specialty Tea": cat4,
+  "Tea Latte": cat5,
+  "Coffee": cat6,
+};
+
+
+<div className="lm-category">
+  {teaMenu.map((item, index) => (
+    <div className="list-card" key={index}>
+      <div
+        className="list-img"
+        onClick={() => navigateToCategory(item.category)}
+      >
+        <img
+          src={categoryPic[item.category as CategoryName]}
+          alt={item.category}
+        />
+      </div>
+
+      <h4>{item.category}</h4>
+    </div>
+  ))}
+</div>
+
+import menu from "../data/menu.json";
+import type { MenuCategory, MenuItem } from "../types/menu";
+
+const data = menu as MenuCategory[];
+
+export default function Recommendation() {
+  const allItems: MenuItem[] = data.flatMap((c) => c.items);
+
+  const chefPick = allItems.filter((item) =>
+    item.pick.includes("chef")
+  );
+
+  const guestPick = allItems.filter((item) =>
+    item.pick.includes("guest")
+  );
+
+  return (
+    <div className="p-6 space-y-10">
+      <div>
+        <h2 className="text-2xl font-bold mb-4">👨‍🍳 Chef Pick</h2>
+        <div className="grid gap-3">
+          {chefPick.map((item) => (
+            <div key={item.title} className="p-3 border rounded">
+              {item.title} - {item.price}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">⭐ Guest Favorite</h2>
+        <div className="grid gap-3">
+          {guestPick.map((item) => (
+            <div key={item.title} className="p-3 border rounded">
+              {item.title} - {item.price}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+📍 42 Floral Street, Covent Garden, London WC2E 9DA, United Kingdom
