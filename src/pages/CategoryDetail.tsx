@@ -12,6 +12,7 @@ import img3 from '../assets/category3.png'
 import img4 from '../assets/category5.png'
 import img5 from '../assets/category4.png'
 import img6 from '../assets/category6.png'
+import bgDetail from '../assets/bg-detail2.png'
 
 type CategoryName = | "SUSHI" | "SIGNATURE ROLLS" | "APPETIZERS" | "RAMEN" | "SPECIALS" | "DRINKS";
 
@@ -48,7 +49,10 @@ export default function CategoryDetail() {
     }
 
     return (
-        <div className=" flex flex-col items-center justify-between w-[360px]  h-screen gap-2.5 pt-4 pb-4 border shadow-md border-primary bg-[url('/src/Assets/bg-detail2.png')] bg-cover bg-no-repeat text-white">
+        <div
+            className=" flex flex-col items-center justify-between w-[360px]  h-screen gap-2.5 pt-4 pb-4 border shadow-md border-primary bg-cover bg-no-repeat text-white"
+            style={{ backgroundImage: `url(${bgDetail})` }}
+        >
 
             <Navbar />
 
